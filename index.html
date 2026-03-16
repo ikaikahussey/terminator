@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stop Using Our Lands for Illegal Wars</title>
   <meta name="description"
-    content="A petition to the Board of Land and Natural Resources, State of Hawaiʻi, demanding termination of military leases on public trust lands.">
+    content="A petition to the State of Hawaiʻi Board of Land and Natural Resources, demanding termination of military leases on public trust lands.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -374,7 +374,9 @@
       border-radius: 8px;
     }
 
-    .share-panel.visible { display: block; }
+    .share-panel.visible {
+      display: block;
+    }
 
     .share-panel h3 {
       font-family: var(--serif);
@@ -412,16 +414,41 @@
       text-decoration: none;
     }
 
-    .share-btn:hover { opacity: 0.85; }
-    .share-btn svg { flex-shrink: 0; }
+    .share-btn:hover {
+      opacity: 0.85;
+    }
 
-    .share-btn--copy { background: var(--ink); }
-    .share-btn--copy.copied { background: var(--success-border); }
-    .share-btn--x { background: #000000; }
-    .share-btn--fb { background: #1877f2; }
-    .share-btn--wa { background: #25d366; }
-    .share-btn--native { background: var(--accent); }
-    .share-btn--sms { background: #6b6560; }
+    .share-btn svg {
+      flex-shrink: 0;
+    }
+
+    .share-btn--copy {
+      background: var(--ink);
+    }
+
+    .share-btn--copy.copied {
+      background: var(--success-border);
+    }
+
+    .share-btn--x {
+      background: #000000;
+    }
+
+    .share-btn--fb {
+      background: #1877f2;
+    }
+
+    .share-btn--wa {
+      background: #25d366;
+    }
+
+    .share-btn--native {
+      background: var(--accent);
+    }
+
+    .share-btn--sms {
+      background: #6b6560;
+    }
 
     .copy-url-row {
       display: flex;
@@ -456,7 +483,9 @@
       display: none;
     }
 
-    .signatories-section.visible { display: block; }
+    .signatories-section.visible {
+      display: block;
+    }
 
     .signatories-heading {
       font-family: var(--serif);
@@ -478,7 +507,9 @@
     }
 
     @media (max-width: 500px) {
-      .signatories-list { column-count: 1; }
+      .signatories-list {
+        column-count: 1;
+      }
     }
 
     .signatories-list li {
@@ -489,7 +520,9 @@
       border-bottom: 1px solid var(--rule);
     }
 
-    .signatories-list li:last-child { border-bottom: none; }
+    .signatories-list li:last-child {
+      border-bottom: none;
+    }
 
     .signatories-list .sig-new {
       animation: fadeUp 0.4s ease both;
@@ -665,7 +698,11 @@
         <div class="copy-url-row">
           <input type="text" class="copy-url-input" id="copy-url" value="" readonly>
           <button class="share-btn share-btn--copy" id="btn-copy">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" />
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+            </svg>
             <span id="copy-label">Copy</span>
           </button>
         </div>
@@ -673,23 +710,44 @@
         <p class="share-or">Share directly</p>
         <div class="share-buttons">
           <a class="share-btn share-btn--wa" id="share-wa" href="#" target="_blank" rel="noopener">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.624-1.213A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.115 0-4.07-.652-5.686-1.766l-.408-.242-2.743.72.733-2.677-.266-.423A9.72 9.72 0 0 1 2.25 12 9.75 9.75 0 1 1 12 21.75z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.624-1.213A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.115 0-4.07-.652-5.686-1.766l-.408-.242-2.743.72.733-2.677-.266-.423A9.72 9.72 0 0 1 2.25 12 9.75 9.75 0 1 1 12 21.75z" />
+            </svg>
             WhatsApp
           </a>
           <a class="share-btn share-btn--x" id="share-x" href="#" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
             X
           </a>
           <a class="share-btn share-btn--fb" id="share-fb" href="#" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
             Facebook
           </a>
           <a class="share-btn share-btn--sms" id="share-sms" href="#" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
             Text
           </a>
           <button class="share-btn share-btn--native" id="share-native" style="display:none;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3" />
+              <circle cx="6" cy="12" r="3" />
+              <circle cx="18" cy="19" r="3" />
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+            </svg>
             More&hellip;
           </button>
         </div>
@@ -744,7 +802,7 @@
       fetch('/api/signatories')
         .then(function (r) { return r.json(); })
         .then(function (data) { renderSignatories(data.signers || [], false); })
-        .catch(function () {});
+        .catch(function () { });
 
       // --- Share URL ---
       document.getElementById('copy-url').value = SHARE_URL;
@@ -766,7 +824,7 @@
       if (navigator.share) {
         document.getElementById('share-native').style.display = 'inline-flex';
         document.getElementById('share-native').addEventListener('click', function () {
-          navigator.share({ title: 'Stop Using Our Lands for Illegal Wars', text: SHARE_TEXT, url: SHARE_URL }).catch(function () {});
+          navigator.share({ title: 'Stop Using Our Lands for Illegal Wars', text: SHARE_TEXT, url: SHARE_URL }).catch(function () { });
         });
       }
 
@@ -809,7 +867,7 @@
 
           if (!apiRes.ok) {
             var errData = {};
-            try { errData = await apiRes.json(); } catch (_) {}
+            try { errData = await apiRes.json(); } catch (_) { }
             throw new Error(errData.error || 'Submission failed');
           }
 
@@ -821,7 +879,7 @@
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams(formData).toString(),
-          }).catch(function () {});
+          }).catch(function () { });
 
           // Show share panel
           form.style.display = 'none';
