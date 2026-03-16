@@ -795,15 +795,7 @@
         var fullName = firstName + ' ' + lastName;
 
         try {
-          // 1. Submit to Netlify Forms (captures all private fields)
-          var formRes = await fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString(),
-          });
-          if (!formRes.ok) throw new Error('Form submission failed');
-
-          // 2. Submit to signatories API (name public, contact stored privately in Airtable)
+          // 1. Submit to Airtable (primary datastore)
           var apiRes = await fetch('/api/signatories', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -814,16 +806,29 @@
               zip: (formData.get('zip_code') || '').trim(),
             }),
           });
-          if (apiRes.ok) {
-            var data = await apiRes.json();
-            renderSignatories(data.signers || [], true);
+
+          if (!apiRes.ok) {
+            var errData = {};
+            try { errData = await apiRes.json(); } catch (_) {}
+            throw new Error(errData.error || 'Submission failed');
           }
+
+          var data = await apiRes.json();
+          renderSignatories(data.signers || [], true);
+
+          // 2. Submit to Netlify Forms (backup — non-blocking, fire and forget)
+          fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString(),
+          }).catch(function () {});
 
           // Show share panel
           form.style.display = 'none';
           sharePanel.classList.add('visible');
           sharePanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } catch (err) {
+          console.error('Petition submit error:', err);
           errorMsg.textContent = 'Something went wrong. Please try again.';
           errorMsg.classList.add('visible');
           btn.disabled = false;
