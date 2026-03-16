@@ -803,11 +803,16 @@
           });
           if (!formRes.ok) throw new Error('Form submission failed');
 
-          // 2. Submit name to signatories API (public names only)
+          // 2. Submit to signatories API (name public, contact stored privately in Airtable)
           var apiRes = await fetch('/api/signatories', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: fullName }),
+            body: JSON.stringify({
+              name: fullName,
+              email: (formData.get('email') || '').trim(),
+              phone: (formData.get('phone') || '').trim(),
+              zip: (formData.get('zip_code') || '').trim(),
+            }),
           });
           if (apiRes.ok) {
             var data = await apiRes.json();
