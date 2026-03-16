@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Using Our Lands for Illegal Wars</title>
+  <meta name="description"
+    content="A petition to the Board of Land and Natural Resources, State of Hawaiʻi, demanding termination of military leases on public trust lands.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --ink: #1a1a1a;
+      --paper: #faf8f5;
+      --accent: #8b2500;
+      --accent-light: #a83a14;
+      --muted: #6b6560;
+      --rule: #d4cfc9;
+      --field-bg: #ffffff;
+      --field-border: #c8c3bb;
+      --field-focus: #8b2500;
+      --success-bg: #f0f7f0;
+      --success-border: #4a7c59;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Source Sans 3', -apple-system, sans-serif;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- HERO --- */
+    .hero {
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--rule);
+      background: linear-gradient(180deg, #f5f0ea 0%, var(--paper) 100%);
+    }
+
+    .hero-kicker {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ink);
+      max-width: 680px;
+      margin: 0 auto 1rem;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .hero-sub em {
+      font-style: normal;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .sig-count-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+      padding: 0.5rem 1.2rem;
+      background: var(--field-bg);
+      border: 1px solid var(--rule);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .sig-count-bar strong {
+      font-size: 1.2rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* --- MAIN LAYOUT --- */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* --- PETITION BODY --- */
+    .petition {
+      padding: 2.5rem 0;
+    }
+
+    .petition p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .petition .lead {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      line-height: 1.75;
+    }
+
+    .citation-block {
+      margin: 1.5rem 0;
+      padding-left: 1.25rem;
+      border-left: 3px solid var(--accent);
+    }
+
+    .citation-block p {
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--ink);
+    }
+
+    .citation-block .dash {
+      color: var(--accent);
+      font-weight: 700;
+      margin-right: 0.25rem;
+    }
+
+    .citation-block a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-color: rgba(139, 37, 0, 0.3);
+      text-underline-offset: 2px;
+      transition: text-decoration-color 0.2s;
+    }
+
+    .citation-block a:hover {
+      text-decoration-color: var(--accent);
+    }
+
+    .case-name {
+      font-style: italic;
+    }
+
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 2rem 0;
+    }
+
+    /* --- DEMANDS --- */
+    .demands-heading {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    .demand {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .demand-num {
+      flex-shrink: 0;
+      width: 1.6rem;
+      height: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-top: 0.2rem;
+    }
+
+    .closing {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.6;
+      margin-top: 2rem;
+    }
+
+    /* --- SIGN SECTION --- */
+    .sign-section {
+      padding: 2.5rem 0 4rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .sign-heading {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .sign-intro {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 500px) {
+      .form-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form-grid .full {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .field label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+
+    .field input {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      font-family: var(--sans);
+      font-size: 1rem;
+      color: var(--ink);
+      background: var(--field-bg);
+      border: 1.5px solid var(--field-border);
+      border-radius: 6px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .field input:focus {
+      border-color: var(--field-focus);
+      box-shadow: 0 0 0 3px rgba(139, 37, 0, 0.1);
+    }
+
+    .field input::placeholder {
+      color: #b5b0a8;
+    }
+
+    .privacy-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-top: 0.25rem;
+    }
+
+    .privacy-note svg {
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .btn-sign {
+      display: block;
+      width: 100%;
+      padding: 0.85rem;
+      margin-top: 0.5rem;
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      background: var(--accent);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-sign:hover {
+      background: var(--accent-light);
+    }
+
+    .btn-sign:active {
+      transform: scale(0.99);
+    }
+
+    .btn-sign:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* --- SUCCESS --- */
+    .success-msg {
+      display: none;
+      padding: 1.25rem 1.5rem;
+      background: var(--success-bg);
+      border: 1.5px solid var(--success-border);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .success-msg.visible {
+      display: block;
+    }
+
+    .success-msg h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      margin-bottom: 0.35rem;
+      color: #2d5a3a;
+    }
+
+    .success-msg p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* --- ERROR --- */
+    .error-msg {
+      display: none;
+      padding: 0.75rem 1rem;
+      margin-top: 0.5rem;
+      background: #fdf0ef;
+      border: 1.5px solid #c0392b;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: #922b21;
+      text-align: center;
+    }
+
+    .error-msg.visible {
+      display: block;
+    }
+
+    /* --- SHARE UI --- */
+    .share-panel {
+      display: none;
+      padding: 1.5rem;
+      background: var(--success-bg);
+      border: 1.5px solid var(--success-border);
+      border-radius: 8px;
+    }
+
+    .share-panel.visible { display: block; }
+
+    .share-panel h3 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      margin-bottom: 0.25rem;
+      color: #2d5a3a;
+    }
+
+    .share-panel .share-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .share-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.6rem 1rem;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: opacity 0.15s;
+      text-decoration: none;
+    }
+
+    .share-btn:hover { opacity: 0.85; }
+    .share-btn svg { flex-shrink: 0; }
+
+    .share-btn--copy { background: var(--ink); }
+    .share-btn--copy.copied { background: var(--success-border); }
+    .share-btn--x { background: #000000; }
+    .share-btn--fb { background: #1877f2; }
+    .share-btn--wa { background: #25d366; }
+    .share-btn--native { background: var(--accent); }
+    .share-btn--sms { background: #6b6560; }
+
+    .copy-url-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .copy-url-input {
+      flex: 1;
+      padding: 0.55rem 0.75rem;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: #fff;
+      border: 1.5px solid var(--field-border);
+      border-radius: 6px;
+      outline: none;
+    }
+
+    .share-or {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.6rem;
+    }
+
+    /* --- SIGNATORIES --- */
+    .signatories-section {
+      padding: 2rem 0;
+      border-top: 1px solid var(--rule);
+      display: none;
+    }
+
+    .signatories-section.visible { display: block; }
+
+    .signatories-heading {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .signatories-count {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .signatories-list {
+      column-count: 2;
+      column-gap: 1.5rem;
+      list-style: none;
+    }
+
+    @media (max-width: 500px) {
+      .signatories-list { column-count: 1; }
+    }
+
+    .signatories-list li {
+      padding: 0.35rem 0;
+      font-size: 0.95rem;
+      color: var(--ink);
+      break-inside: avoid;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .signatories-list li:last-child { border-bottom: none; }
+
+    .signatories-list .sig-new {
+      animation: fadeUp 0.4s ease both;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--rule);
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    /* --- ANIMATIONS --- */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero h1 {
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-sub {
+      animation: fadeUp 0.6s ease 0.1s both;
+    }
+
+    .sig-count-bar {
+      animation: fadeUp 0.6s ease 0.2s both;
+    }
+
+    .petition {
+      animation: fadeUp 0.5s ease 0.3s both;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======== HERO ======== -->
+  <header class="hero">
+    <div class="hero-kicker">Petition to the BLNR &middot; State of Hawai&#x02BB;i</div>
+    <h1>Stop Using Our Lands for Illegal Wars</h1>
+    <p class="hero-sub">
+      A demand to the <em>Board of Land and Natural Resources</em> to terminate military leases on Crown and Government
+      trust lands.
+    </p>
+    <!-- <div class="sig-count-bar">
+    <strong id="sig-count">0</strong> signatures
+  </div> -->
+  </header>
+
+  <!-- ======== PETITION TEXT ======== -->
+  <main class="container">
+    <section class="petition">
+
+      <p class="lead">
+        President Trump&rsquo;s Department of War is leasing tens of thousands of acres of our Crown and Government
+        trust lands to conduct an illegal war in Iran, waged without a declaration of war by Congress and in flagrant
+        violation of international law.
+      </p>
+
+      <p>
+        The <a href="https://uscode.house.gov/view.xhtml?path=/prelim@title48/chapter3&edition=prelim" target="_blank"
+          rel="noopener">law governing our public trust lands</a> is clear: they should be used for education, housing,
+        agriculture, the betterment of Native Hawaiians, and public use. Our lands should not be used to conduct illegal
+        activity and illegal wars.
+      </p>
+
+      <p>
+        <strong>The President&rsquo;s Department of War is breaking Hawaiian law. We should revoke his lease.</strong>
+      </p>
+
+      <p>
+        The <a href="https://dlnr.hawaii.gov/land/" target="_blank" rel="noopener">Board of Land and Natural
+          Resources</a> is responsible for these leases, and has a legal, fiduciary duty to protect trust lands. A
+        trustee who allows trust property to be used for illegal purposes has breached its duty. The Board cannot simply
+        look the other way.
+      </p>
+
+      <hr class="section-rule">
+
+      <h2 class="demands-heading">We, the undersigned, demand that the Board of Land and Natural Resources:</h2>
+
+      <div class="demand">
+        <span class="demand-num">1</span>
+        <p><strong>Terminate</strong> all military leases and revocable permits on public trust lands where the lands
+          are being used in support of unlawful military operations.</p>
+      </div>
+
+      <div class="demand">
+        <span class="demand-num">2</span>
+        <p><strong>Place this matter</strong> on the Board&rsquo;s agenda for formal public action.</p>
+      </div>
+
+      <p class="closing">
+        The people of Hawai&#x02BB;i conscientiously object to the use of our lands for illegal wars. The Board has a
+        duty to act. We demand action now.
+      </p>
+
+    </section>
+
+    <!-- ======== SIGN FORM ======== -->
+    <section class="sign-section" id="sign">
+      <h2 class="sign-heading">Add Your Name</h2>
+      <p class="sign-intro">Stand with us. Your signature adds to the public record of demand.</p>
+
+      <form id="petition-form" name="petition-signatures" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+        netlify>
+        <!-- Netlify honeypot for spam -->
+        <p style="display:none"><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" placeholder="e.g. Keola" required
+              autocomplete="given-name">
+          </div>
+          <div class="field">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" placeholder="e.g. Nakamura" required
+              autocomplete="family-name">
+          </div>
+          <div class="field">
+            <label for="email">Email <span style="font-weight:400;text-transform:none">(optional)</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="phone">Phone <span style="font-weight:400;text-transform:none">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(808) 555-0123" autocomplete="tel">
+          </div>
+          <div class="field full">
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" name="zip_code" placeholder="96819" inputmode="numeric" pattern="[0-9]{5}"
+              autocomplete="postal-code">
+          </div>
+          <div class="full">
+            <div class="privacy-note">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              <span>Your email and phone number will be used <strong>only</strong> for future organizing efforts and
+                will <strong>never</strong> be displayed publicly. Only your name will appear on the petition.</span>
+            </div>
+          </div>
+          <div class="full">
+            <button type="submit" class="btn-sign" id="btn-sign">Sign the Petition</button>
+          </div>
+          <div class="full">
+            <div class="error-msg" id="error-msg"></div>
+          </div>
+        </div>
+      </form>
+
+      <div class="share-panel" id="share-panel">
+        <h3>Mahalo &mdash; you signed!</h3>
+        <p class="share-sub">Now help this reach more people. Every share matters.</p>
+
+        <div class="copy-url-row">
+          <input type="text" class="copy-url-input" id="copy-url" value="" readonly>
+          <button class="share-btn share-btn--copy" id="btn-copy">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span id="copy-label">Copy</span>
+          </button>
+        </div>
+
+        <p class="share-or">Share directly</p>
+        <div class="share-buttons">
+          <a class="share-btn share-btn--wa" id="share-wa" href="#" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.624-1.213A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.115 0-4.07-.652-5.686-1.766l-.408-.242-2.743.72.733-2.677-.266-.423A9.72 9.72 0 0 1 2.25 12 9.75 9.75 0 1 1 12 21.75z"/></svg>
+            WhatsApp
+          </a>
+          <a class="share-btn share-btn--x" id="share-x" href="#" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            X
+          </a>
+          <a class="share-btn share-btn--fb" id="share-fb" href="#" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <a class="share-btn share-btn--sms" id="share-sms" href="#" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Text
+          </a>
+          <button class="share-btn share-btn--native" id="share-native" style="display:none;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            More&hellip;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== SIGNATORIES ======== -->
+    <section class="signatories-section" id="signatories-section">
+      <h2 class="signatories-heading">Signatories</h2>
+      <p class="signatories-count"><span id="sig-total">0</span> people have signed</p>
+      <ul class="signatories-list" id="signatories-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>This petition is a public document addressed to the Board of Land and Natural Resources, State of Hawai&#x02BB;i.
+    </p>
+  </footer>
+
+  <script>
+    (function () {
+      const form = document.getElementById('petition-form');
+      const btn = document.getElementById('btn-sign');
+      const sharePanel = document.getElementById('share-panel');
+      const errorMsg = document.getElementById('error-msg');
+
+      const sigSection = document.getElementById('signatories-section');
+      const sigList = document.getElementById('signatories-list');
+      const sigTotal = document.getElementById('sig-total');
+
+      const SHARE_TEXT = 'Hawai\u02BBi\u2019s trust lands are being used for an illegal war in Iran. Sign the petition to revoke the military leases.';
+      const SHARE_URL = window.location.href.split('?')[0].split('#')[0];
+      const THRESHOLD = 20;
+
+      // --- Render signatories from server data ---
+      function renderSignatories(signers, highlightFirst) {
+        sigTotal.textContent = signers.length;
+        if (signers.length >= THRESHOLD) {
+          sigSection.classList.add('visible');
+          sigList.innerHTML = '';
+          var display = signers.slice().reverse();
+          display.forEach(function (s, i) {
+            var li = document.createElement('li');
+            li.textContent = s.name;
+            if (i === 0 && highlightFirst) li.className = 'sig-new';
+            sigList.appendChild(li);
+          });
+        }
+      }
+
+      // --- Load signatories on page load ---
+      fetch('/api/signatories')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { renderSignatories(data.signers || [], false); })
+        .catch(function () {});
+
+      // --- Share URL ---
+      document.getElementById('copy-url').value = SHARE_URL;
+
+      // --- Share buttons ---
+      var encodedText = encodeURIComponent(SHARE_TEXT);
+      var encodedUrl = encodeURIComponent(SHARE_URL);
+
+      document.getElementById('share-x').href =
+        'https://x.com/intent/tweet?text=' + encodedText + '&url=' + encodedUrl;
+      document.getElementById('share-fb').href =
+        'https://www.facebook.com/sharer/sharer.php?u=' + encodedUrl;
+      document.getElementById('share-wa').href =
+        'https://wa.me/?text=' + encodeURIComponent(SHARE_TEXT + ' ' + SHARE_URL);
+      document.getElementById('share-sms').href =
+        'sms:?&body=' + encodeURIComponent(SHARE_TEXT + ' ' + SHARE_URL);
+
+      // Native share (mobile)
+      if (navigator.share) {
+        document.getElementById('share-native').style.display = 'inline-flex';
+        document.getElementById('share-native').addEventListener('click', function () {
+          navigator.share({ title: 'Stop Using Our Lands for Illegal Wars', text: SHARE_TEXT, url: SHARE_URL }).catch(function () {});
+        });
+      }
+
+      // Copy button
+      document.getElementById('btn-copy').addEventListener('click', function () {
+        var input = document.getElementById('copy-url');
+        navigator.clipboard.writeText(input.value).then(function () {
+          var label = document.getElementById('copy-label');
+          var copyBtn = document.getElementById('btn-copy');
+          label.textContent = 'Copied!';
+          copyBtn.classList.add('copied');
+          setTimeout(function () { label.textContent = 'Copy'; copyBtn.classList.remove('copied'); }, 2000);
+        });
+      });
+
+      // --- Form submission ---
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        btn.disabled = true;
+        btn.textContent = 'Submitting\u2026';
+        errorMsg.classList.remove('visible');
+
+        var formData = new FormData(form);
+        var firstName = (formData.get('first_name') || '').trim();
+        var lastName = (formData.get('last_name') || '').trim();
+        var fullName = firstName + ' ' + lastName;
+
+        try {
+          // 1. Submit to Netlify Forms (captures all private fields)
+          var formRes = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString(),
+          });
+          if (!formRes.ok) throw new Error('Form submission failed');
+
+          // 2. Submit name to signatories API (public names only)
+          var apiRes = await fetch('/api/signatories', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: fullName }),
+          });
+          if (apiRes.ok) {
+            var data = await apiRes.json();
+            renderSignatories(data.signers || [], true);
+          }
+
+          // Show share panel
+          form.style.display = 'none';
+          sharePanel.classList.add('visible');
+          sharePanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } catch (err) {
+          errorMsg.textContent = 'Something went wrong. Please try again.';
+          errorMsg.classList.add('visible');
+          btn.disabled = false;
+          btn.textContent = 'Sign the Petition';
+        }
+      });
+    })();
+  </script>
+
+</body>
+
+</html>
